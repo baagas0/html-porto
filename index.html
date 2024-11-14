@@ -1,96 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="/_vercel/insights/script.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
-    />
-    <title>Vercel HTML Starter</title>
-    <meta
-      name="description"
-      content="High-performance HTML based website template."
-    />
-  </head>
-  <body>
-    <h1>Vercel HTML Starter</h1>
-    <p>
-      This template is a simple, but powerful single
-      <code>index.html</code> file deployed to
-      <a href="https://vercel.com">Vercel</a>. When your site is deployed, all
-      static assets (like HTML, JavaScript, CSS, images, and more) are deployed
-      globally to every
-      <a href="https://vercel.com/docs/concepts/edge-network/overview"
-        >Vercel Edge Network</a
-      >
-      region.
-    </p>
-    <h2>Simple, privacy-friendly analytics</h2>
-    <p>
-      Want to understand your visitor traffic? Vercel Analytics gives you
-      first-party, privacy-friendly traffic analytics for your HTML site. This
-      template is already configured using the following script:
-    </p>
-    <pre><code>&lt;script defer src="/_vercel/insights/script.js"&gt;&lt;/script&gt;</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/analytics">Vercel Analytics</a>.
-    </p>
-    <h2>Integrated with git</h2>
-    <p>
-      Deploying updates to your site is as simple as
-      <code>git push</code> thanks to Vercel's advanced
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-      Support for GitHub, GitLab, Bitbucket is zero-configuration, and with the
-      flexible Vercel CLI and API, you can integrate with any tool possible.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-    </p>
-    <h2>Fast <code>gzip</code> compression</h2>
-    <p>
-      To help ensure the smallest possible file sizes for your static assets,
-      the Vercel Edge Network compresses files by default using
-      <code>gzip</code>. You can also optionally use
-      <code>brotli</code> compressesion if you prefer.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/edge-network/compression"
-        >compression</a
-      >.
-    </p>
-    <h2>Advanced routing configuration</h2>
-    <p>
-      Vercel gives you a variety of ways to configure the routing of your
-      website. For example, adding redirects, rewrites, or headers to your page.
-      While you can use <code>vercel.json</code> to define these through JSON,
-      you can also express your routing configuration as code using
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-    <p>
-      Middleware runs before the
-      <a href="https://vercel.com/docs/concepts/edge-network/caching"
-        >Vercel Edge Network Cache</a
-      >, so you can configure routing exactly as your application needs. For
-      example, this template uses <code>middleware.js</code> defined in the root
-      of the repository to add additional security headers to the site:
-    </p>
-    <pre><code>referrer-policy: origin-when-cross-origin
-strict-transport-security: max-age=31536000; includeSubDomains; preload
-x-content-type-options: nosniff
-x-dns-prefetch-control: on
-x-frame-options: DENY</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-  </body>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Bagas Aditya Mahendra</title>
+	<meta name="title" content="Ditya Dev">
+	<meta name="description" content="Saya bersemangat membangun website developer, software, dan tools luar biasa yang meningkatkan dan berguna bagi kehidupan orang-orang di sekitar saya dan klien saya. Saya mengkhususkan diri dalam membuat website developer untuk klien mulai dari individu dan bisnis kecil hingga company perusahaan. ">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://bagasawan.me/">
+	<meta property="og:title" content="Bagas Aditya Mahendra">
+	<meta property="og:description" content="Saya bersemangat membangun website developer, software, dan tools luar biasa yang meningkatkan dan berguna bagi kehidupan orang-orang di sekitar saya dan klien saya. Saya mengkhususkan diri dalam membuat website developer untuk klien mulai dari individu dan bisnis kecil hingga company perusahaan. ">
+	<meta property="og:image" content="">
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="http://bagasawan.me/">
+	<meta property="twitter:title" content="Bagas Aditya Mahendra">
+	<meta property="twitter:description" content="Saya bersemangat membangun website developer, software, dan tools luar biasa yang meningkatkan dan berguna bagi kehidupan orang-orang di sekitar saya dan klien saya. Saya mengkhususkan diri dalam membuat website developer untuk klien mulai dari individu dan bisnis kecil hingga company perusahaan. ">
+	<meta property="twitter:image" content="">
+	<link rel="favicon icon" href="LP/images/favicon.png">
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="LP/fonts/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="LP/fonts/flat-icon/flaticon.css">
+	<link rel="stylesheet" href="LP/styles/bootstrap.css" />
+	<link rel="stylesheet" href="LP/styles/main.css" />
+</head>
+
+<body class="demo-page">
+
+	<!-- Preloader -->
+	<div id="js-preloader" class="js-preloader">
+		<div class="content">
+			<img src="LP/images/logo-icon.png" alt="">
+		</div>
+		<div class="preloader-inner"></div>
+	</div>
+
+
+	<!-- Main Banner -->
+	<section class="demo-page-baner">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="demo-logo">
+						<img src="LP/images/BG-TR4.png" alt="">
+					</div>
+					<h2>Setup a <em>stunning</em> website with <em>Ditya</em>.</h2>
+					<div class="scroll-to-section">
+						<div class="main-white-button">
+							<a href="#demos">Check Demos Now</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="intro">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h2>Website build by <em>NodeJs, Laravel, VueJs</em> Framework</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="demos"></div>
+	<div class="demo">
+		<div class="container-fluid">
+			<div class="row">
+									<div class="col-lg-4">
+						<div class="demo-item">
+							<div class="demo-thumb">
+								<a href="#">
+									<img src="LP/images/bpsdm.png" alt="" style="border: 1px solid #919191">
+								</a>
+							</div>
+							<div class="down-content" style="padding: 20px">
+								<h4 style="padding: 0px"><a href="#">Pembelajaran BPSDM</a></h4>
+								<small>Frontend ReactJs - Pembelajaran Online</small>
+							</div>
+						</div>
+					</div>
+									<div class="col-lg-4">
+						<div class="demo-item">
+							<div class="demo-thumb">
+								<a href="#">
+									<img src="LP/images/jamdatun.png" alt="" style="border: 1px solid #919191">
+								</a>
+							</div>
+							<div class="down-content" style="padding: 20px">
+								<h4 style="padding: 0px"><a href="#">Jamdatun Video Conference</a></h4>
+								<small>Frontend Vuejs - Video Conference</small>
+							</div>
+						</div>
+					</div>
+									<div class="col-lg-4">
+						<div class="demo-item">
+							<div class="demo-thumb">
+								<a href="#">
+									<img src="LP/images/rsud-busel.png" alt="" style="border: 1px solid #919191">
+								</a>
+							</div>
+							<div class="down-content" style="padding: 20px">
+								<h4 style="padding: 0px"><a href="#">SIMRS - BUSEL</a></h4>
+								<small>Fullstack - Vuejs & NodeJs</small>
+							</div>
+						</div>
+					</div>
+									<div class="col-lg-4">
+						<div class="demo-item">
+							<div class="demo-thumb">
+								<a href="#">
+									<img src="LP/images/qhse.png" alt="" style="border: 1px solid #919191">
+								</a>
+							</div>
+							<div class="down-content" style="padding: 20px">
+								<h4 style="padding: 0px"><a href="#">QHSE - SMKK</a></h4>
+								<small>Quality, Healty, Safety, Enviroment - Add new module</small>
+							</div>
+						</div>
+					</div>
+									<div class="col-lg-4">
+						<div class="demo-item">
+							<div class="demo-thumb">
+								<a href="#">
+									<img src="LP/images/fuel.png" alt="" style="border: 1px solid #919191">
+								</a>
+							</div>
+							<div class="down-content" style="padding: 20px">
+								<h4 style="padding: 0px"><a href="#">Fuel Management</a></h4>
+								<small>Fullstack - Microservice of RBS</small>
+							</div>
+						</div>
+					</div>
+									<div class="col-lg-4">
+						<div class="demo-item">
+							<div class="demo-thumb">
+								<a href="#">
+									<img src="LP/images/asha.png" alt="" style="border: 1px solid #919191">
+								</a>
+							</div>
+							<div class="down-content" style="padding: 20px">
+								<h4 style="padding: 0px"><a href="#">SIMRS - Sistem Rumah Sakit</a></h4>
+								<small>Backend NodeJs</small>
+							</div>
+						</div>
+					</div>
+									<div class="col-lg-4">
+						<div class="demo-item">
+							<div class="demo-thumb">
+								<a href="#">
+									<img src="LP/images/jbt-image.png" alt="" style="border: 1px solid #919191">
+								</a>
+							</div>
+							<div class="down-content" style="padding: 20px">
+								<h4 style="padding: 0px"><a href="#">PLN JBT</a></h4>
+								<small>100% Done</small>
+							</div>
+						</div>
+					</div>
+									<div class="col-lg-4">
+						<div class="demo-item">
+							<div class="demo-thumb">
+								<a href="https://bimtek.bbibnetwork.com/">
+									<img src="LP/images/bimtek-preview.png" alt="" style="border: 1px solid #919191">
+								</a>
+							</div>
+							<div class="down-content" style="padding: 20px">
+								<h4 style="padding: 0px"><a href="https://bimtek.bbibnetwork.com/">Course</a></h4>
+								<small>100% Done</small>
+							</div>
+						</div>
+					</div>
+									<div class="col-lg-4">
+						<div class="demo-item">
+							<div class="demo-thumb">
+								<a href="ppdb">
+									<img src="LP/images/ppdb-preview.png" alt="" style="border: 1px solid #919191">
+								</a>
+							</div>
+							<div class="down-content" style="padding: 20px">
+								<h4 style="padding: 0px"><a href="ppdb">PPDB</a></h4>
+								<small>100% Done</small>
+							</div>
+						</div>
+					</div>
+									<div class="col-lg-4">
+						<div class="demo-item">
+							<div class="demo-thumb">
+								<a href="https://ticketo.demo-web.my.id">
+									<img src="LP/images/ticketo-preview.png" alt="" style="border: 1px solid #919191">
+								</a>
+							</div>
+							<div class="down-content" style="padding: 20px">
+								<h4 style="padding: 0px"><a href="https://ticketo.demo-web.my.id">Ticketo</a></h4>
+								<small>100% Done</small>
+							</div>
+						</div>
+					</div>
+									<div class="col-lg-4">
+						<div class="demo-item">
+							<div class="demo-thumb">
+								<a href="#">
+									<img src="LP/images/api-preview.png" alt="" style="border: 1px solid #919191">
+								</a>
+							</div>
+							<div class="down-content" style="padding: 20px">
+								<h4 style="padding: 0px"><a href="#">Marketplace API</a></h4>
+								<small>100% Done</small>
+							</div>
+						</div>
+					</div>
+									<div class="col-lg-4">
+						<div class="demo-item">
+							<div class="demo-thumb">
+								<a href="company-profile">
+									<img src="LP/images/company-profile-preview.png" alt="" style="border: 1px solid #919191">
+								</a>
+							</div>
+							<div class="down-content" style="padding: 20px">
+								<h4 style="padding: 0px"><a href="company-profile">Company Profile</a></h4>
+								<small>100% Done</small>
+							</div>
+						</div>
+					</div>
+									<div class="col-lg-4">
+						<div class="demo-item">
+							<div class="demo-thumb">
+								<a href="https://resto.demo-web.my.id/login">
+									<img src="LP/images/restaurant.png" alt="" style="border: 1px solid #919191">
+								</a>
+							</div>
+							<div class="down-content" style="padding: 20px">
+								<h4 style="padding: 0px"><a href="https://resto.demo-web.my.id/login">Rataurant Management</a></h4>
+								<small>100% Done</small>
+							</div>
+						</div>
+					</div>
+									<div class="col-lg-4">
+						<div class="demo-item">
+							<div class="demo-thumb">
+								<a href="https://buku-induk.demo-web.my.id/master/login">
+									<img src="LP/images/buku-induk.png" alt="" style="border: 1px solid #919191">
+								</a>
+							</div>
+							<div class="down-content" style="padding: 20px">
+								<h4 style="padding: 0px"><a href="https://buku-induk.demo-web.my.id/master/login">Buku Induk</a></h4>
+								<small>100% Done</small>
+							</div>
+						</div>
+					</div>
+									<div class="col-lg-4">
+						<div class="demo-item">
+							<div class="demo-thumb">
+								<a href="https://tiraipelajarmandalika.or.id">
+									<img src="LP/images/tiraimandalika.png" alt="" style="border: 1px solid #919191">
+								</a>
+							</div>
+							<div class="down-content" style="padding: 20px">
+								<h4 style="padding: 0px"><a href="https://tiraipelajarmandalika.or.id">Tirai Mandalika</a></h4>
+								<small>100% Done</small>
+							</div>
+						</div>
+					</div>
+									<div class="col-lg-4">
+						<div class="demo-item">
+							<div class="demo-thumb">
+								<a href="#">
+									<img src="LP/images/event-image.png" alt="" style="border: 1px solid #919191">
+								</a>
+							</div>
+							<div class="down-content" style="padding: 20px">
+								<h4 style="padding: 0px"><a href="#">Event Management</a></h4>
+								<small>100% Done</small>
+							</div>
+						</div>
+					</div>
+									<div class="col-lg-4">
+						<div class="demo-item">
+							<div class="demo-thumb">
+								<a href="https://siadin.demo-web.my.id">
+									<img src="LP/images/siadin2.png" alt="" style="border: 1px solid #919191">
+								</a>
+							</div>
+							<div class="down-content" style="padding: 20px">
+								<h4 style="padding: 0px"><a href="https://siadin.demo-web.my.id">Sistem Akademik</a></h4>
+								<small>100% Done</small>
+							</div>
+						</div>
+					</div>
+									<div class="col-lg-4">
+						<div class="demo-item">
+							<div class="demo-thumb">
+								<a href="#">
+									<img src="LP/images/wa-center.png" alt="" style="border: 1px solid #919191">
+								</a>
+							</div>
+							<div class="down-content" style="padding: 20px">
+								<h4 style="padding: 0px"><a href="#">Sistem Penjualan Lisensi API Whatsapp</a></h4>
+								<small>100% Done</small>
+							</div>
+						</div>
+					</div>
+								<!-- ======================================================================================= -->
+				<div class="col-lg-4">
+					<div class="demo-item coming-soon">
+						<div class="demo-thumb">
+							<h4>&amp;<br>Much More Coming Soon<br>...</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Footer -->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="footer-cta">
+						<div class="row">
+							<div class="col-lg-7 text-left">
+								<div class="section-heading">
+									<h1>Bagas Aditya Mahendra</h1>
+									<h2>Bagas Aditya Mahendra</h2>
+									<p>Website developer build by NodeJs, Laravel, VueJs Framework</p>
+								</div>
+							</div>
+							<div class="col-lg-5 text-right align-self-center">
+								<div class="main-white-button">
+									<a href="https://api.whatsapp.com/send/?phone=6289506373551&text&app_absent=0">Contact Me!</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+
+	<!-- Scripts -->
+	<script src="LP/scripts/vendors/jquery-3.4.1.min.js"></script>
+	<script src="LP/scripts/vendors/jquery.hoverIntent.min.js"></script>
+	<script src="LP/scripts/vendors/perfect-scrollbar.min.js"></script>
+	<script src="LP/scripts/vendors/jquery.easing.min.js"></script>
+	<script src="LP/scripts/vendors/wow.min.js"></script>
+	<script src="LP/scripts/vendors/parallax.min.js"></script>
+	<script src="LP/scripts/vendors/isotope.min.js"></script>
+	<script src="LP/scripts/vendors/imagesloaded.pkgd.min.js"></script>
+	<script src="LP/scripts/vendors/packery-mode.pkgd.min.js"></script>
+	<script src="LP/scripts/vendors/owl-carousel.min.js"></script>
+	<script src="LP/scripts/vendors/jquery.appear.js"></script>
+	<script src="LP/scripts/vendors/jquery.countTo.js"></script>
+	<script src="LP/scripts/vendors/slide-nav.min.js"></script>
+	<script src="LP/scripts/main.js"></script>
+
+
+</body>
+
 </html>
